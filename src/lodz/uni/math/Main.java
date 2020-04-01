@@ -16,7 +16,7 @@ public class Main {
 	        throw new myException("Mój wyjątek");
         }
 	    catch(myException ex){
-            System.out.println("myException exception: " + ex.getMessage());
+            System.out.println(ex.getMessage());
         }
     }
 }

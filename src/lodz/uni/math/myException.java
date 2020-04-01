@@ -11,6 +11,6 @@ public class myException extends Exception {
 
     @Override
     public String getMessage() {
-        return super.getMessage();
+        return "myException exception: " +  super.getMessage();
     }
 }
