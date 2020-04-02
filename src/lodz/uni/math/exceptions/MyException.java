@@ -1,10 +1,10 @@
 package lodz.uni.math.exceptions;
 
-public class myException extends Exception {
+public class MyException extends Exception {
 
     public String messege;
 
-    public myException(String message) {
+    public MyException(String message) {
         super(message);
         this.messege = message;
     }

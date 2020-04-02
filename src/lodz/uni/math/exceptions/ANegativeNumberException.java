@@ -1,8 +1,8 @@
 package lodz.uni.math.exceptions;
 
-public class aNegativeNumberException extends ArithmeticException {
+public class ANegativeNumberException extends ArithmeticException {
 
-    public aNegativeNumberException() {
+    public ANegativeNumberException() {
         super();
     }
 

@@ -1,18 +1,18 @@
 package lodz.uni.math;
 
-import lodz.uni.math.exceptions.aNegativeNumberException;
-import lodz.uni.math.exceptions.dividingByZeroException;
+import lodz.uni.math.exceptions.*;
 
 public class Zad5 {
 
+    public Zad5(){}
 
     public void f(){
         try{
             this.g(2,0);
             this.g(-2,5);
-        } catch(dividingByZeroException ex){
+        } catch(DividingByZeroException ex){
             System.out.println(ex.getMessage());
-        } catch(aNegativeNumberException ex){
+        } catch(ANegativeNumberException ex){
             System.out.println(ex.getMessage());
         }
 
@@ -24,9 +24,9 @@ public class Zad5 {
 
     }
 
-    public void g(int a, int b) throws dividingByZeroException, aNegativeNumberException {
-        if(b == 0) throw new dividingByZeroException();
-        if(a < 0 || b < 0) throw new aNegativeNumberException();
+    public void g(int a, int b) throws DividingByZeroException, ANegativeNumberException {
+        if(b == 0) throw new DividingByZeroException();
+        if(a < 0 || b < 0) throw new ANegativeNumberException();
     }
 
 }

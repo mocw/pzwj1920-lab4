@@ -1,6 +1,9 @@
 package lodz.uni.math;
 
-import lodz.uni.math.exceptions.myException;
+import lodz.uni.math.exceptions.MyException;
+import lodz.uni.math.exceptions.OddNumberException;
+import lodz.uni.math.exceptions.TooBigNumberException;
+import lodz.uni.math.exceptions.TooSmallNumberException;
 
 public class Main {
 
@@ -9,6 +12,7 @@ public class Main {
         MyClass myClass = new MyClass();
         Object object = null;
         Zad5 zad5 = new Zad5();
+        Zad6 zad6 = new Zad6();
 
 	    try{ //zad1
            throw new Exception("Wyjątek");
@@ -20,15 +24,15 @@ public class Main {
         }
 
 	    try{    //zad2
-	        throw new myException("Mój wyjątek");
+	        throw new MyException("Mój wyjątek");
         }
-	    catch(myException ex){
+	    catch(MyException ex){
             System.out.println(ex.getMessage());
         }
 
 	    try{ //zad3
             myClass.exceptionTest();
-        } catch(myException ex) {
+        } catch(MyException ex) {
             System.out.println(ex.getMessage());
         }
 
@@ -38,6 +42,13 @@ public class Main {
             System.out.println(ex); //java.lang.NullPointerException
         }
 
-        zad5.f();
+        zad5.f(); //zad5 i 6
+
+        try{
+            zad6.exceptionsTest(173);
+        }
+        catch(TooBigNumberException | TooSmallNumberException | OddNumberException ex){
+            System.out.println(ex.getMessage());
+        }
     }
 }

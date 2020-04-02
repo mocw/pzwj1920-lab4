@@ -1,8 +1,8 @@
 package lodz.uni.math.exceptions;
 
-public class dividingByZeroException extends ArithmeticException {
+public class DividingByZeroException extends ArithmeticException {
 
-    public dividingByZeroException() {
+    public DividingByZeroException() {
         super();
     }
 
