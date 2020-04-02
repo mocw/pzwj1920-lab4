@@ -1,4 +1,4 @@
-package lodz.uni.math;
+package lodz.uni.math.exceptions;
 
 public class myException extends Exception {
 
